@@ -1,18 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My web app</title>
+    <title>Car Your Pimp</title>
+    <link rel="icon" href="pictures/favicon.png?v=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
-        <h1></h1>
-        <p></p>
-        <button></button>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand-logo" aria-label="Car Your Pimp domov">
+                <img src="pictures/Logofinal.png" alt="Logo Car Your Pimp">
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Otvoriť menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Hlavná navigácia">
+                <a href="autoservis-pneuservis.html" class="nav-link">Autoservis / Pneuservis</a>
+                <a href="#tuning" class="nav-link">Tuning</a>
+                <a href="#audio" class="nav-link">Audio</a>
+                <a href="#detailing" class="nav-link">Detailing</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-panel reveal">
+            <div class="hero-copy">
+                <p class="eyebrow">STREET GARAGE • SERVIS • ZVUK • LESK</p>
+                <h1>Tvoja kára na <span class="accent-red">plnom výkone</span> a v top forme.</h1>
+                <p class="hero-lead">
+                    Od poctivej mechaniky a prezutia cez ladenie výkonu až po hlboký zvuk a zrkadlový detailing.
+                </p>
+                <div class="hero-actions">
+                    <a href="autoservis-pneuservis.html" class="btn btn-primary">Prejsť na Autoservis / Pneuservis</a>
+                    <button id="boostPulseBtn" type="button" class="btn btn-ghost">Aktivovať boost režim</button>
+                </div>
+            </div>
+
+            <div class="telemetry-card">
+                <div class="telemetry-top">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span id="garageModeLabel">REŽIM: ŠTANDARDNÁ PREVÁDZKA</span>
+                </div>
+
+                <div class="eq-bars" aria-hidden="true">
+                    <span style="--h: 45%"></span>
+                    <span style="--h: 82%"></span>
+                    <span style="--h: 64%"></span>
+                    <span style="--h: 96%"></span>
+                    <span style="--h: 58%"></span>
+                    <span style="--h: 88%"></span>
+                    <span style="--h: 72%"></span>
+                    <span style="--h: 92%"></span>
+                    <span style="--h: 50%"></span>
+                    <span style="--h: 78%"></span>
+                </div>
+
+                <div class="tuner-controls">
+                    <label for="powerSlider">
+                        Výkonový / zvukový impulz: <strong id="powerValue">75 %</strong>
+                    </label>
+                    <input id="powerSlider" type="range" min="15" max="100" value="75">
+                </div>
+            </div>
+        </section>
+
+        <section class="pillars-grid">
+            <a href="autoservis-pneuservis.html" class="pillar-card reveal">
+                <h2>Autoservis / Pneuservis</h2>
+                <p>Diagnostika, brzdy, podvozok, výmeny kvapalín, pneuservis a vyvažovanie kolies.</p>
+            </a>
+
+            <article id="tuning" class="pillar-card reveal">
+                <span class="pillar-tag">SKORO</span>
+                <h2>Tuning</h2>
+                <p>Úpravy sania, výfukových systémov, podvozkových setov a individuálne nastavenie auta.</p>
+            </article>
+
+            <article id="audio" class="pillar-card reveal">
+                <span class="pillar-tag">SKORO</span>
+                <h2>Audio</h2>
+                <p>Tlmenie dverí, montáž zosilňovačov, subwooferov a presné ladenie zvuku v kabíne.</p>
+            </article>
+
+            <article id="detailing" class="pillar-card reveal">
+                <span class="pillar-tag">SKORO</span>
+                <h2>Detailing</h2>
+                <p>Viacstupňové leštenie laku, keramická ochrana, renovácia svetiel a hĺbkové čistenie interiéru.</p>
+            </article>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-smaller">CAR YOUR PIMP spol. s.r.o</p>
+            <p class="footer-smaller">Location: Underground st., 0123 45 NeedForSpeed, Slovensko</p>
+            <p class="footer-copy">COPYRIGHT - CAR YOUR PIMP 2026</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
